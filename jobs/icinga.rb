@@ -125,7 +125,7 @@ def request_status(url, user, pass, type)
   }
   resp, data = http.post(path, data, headers)
 
-  path = '/monitoring/list/'+type+'s&format=json'
+  path = '/monitoring/list/'+type+'s?format=json'
   cookSession = resp.response['set-cookie'].split('; ')[0]
   cookNew = resp.response['set-cookie'].split('; ')[3]
   cookIcinga = cookNew.split(', ')[1]
