@@ -100,9 +100,9 @@ end
 def request_status(url, user, pass, type)
   case type
   when "host"
-    url_part = "style=hostdetail"
+    url_part = ""
   when "service"
-    url_part = "host=all&hoststatustypes=3"
+    url_part = ""
   else
     throw "status type '" + type + "' is not supported!"
   end
@@ -125,7 +125,7 @@ def request_status(url, user, pass, type)
   }
   resp, data = http.post(path, data, headers)
 
-  path = '/monitoring/list/'+type+'s?format=json'
+  path = '/monitoring/list/'+type+'s?'+url_part+'format=json'
   cookSession = resp.response['set-cookie'].split('; ')[0]
   cookNew = resp.response['set-cookie'].split('; ')[3]
   cookIcinga = cookNew.split(', ')[1]
