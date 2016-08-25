@@ -1,0 +1,56 @@
+$critical: red;
+$warning: yellow;
+$ok: green;
+$unknown: orange;
+$pending: cyan;
+
+.icinga-duration {
+  text-align: right !important;
+  font-size: 0.6em !important;
+}
+
+.icinga-status {
+  font-weight: bold;
+  text-align: right !important;
+}
+
+.icinga-status-host-0, .icinga-status-host-0 span,
+.icinga-status-service-0, .icinga-status-service-0 span {
+  color: $ok;
+}
+.icinga-status-host-1, .icinga-status-host-1 span,
+.icinga-status-host-2, .icinga-status-host-2 span,
+.icinga-status-service-2, .icinga-status-service-2 span {
+  color: $critical;
+}
+.icinga-status-service-1, .icinga-status-service-1 span {
+  color: $warning;
+}
+.icinga-status-service-3, .icinga-status-service-3 span {
+  color: $unknown;
+}
+.icinga-status-service-99, .icinga-status-service-99 span {
+  color: $pending;
+}
+
+.icinga-latest-problems {
+  padding: 12px !important;
+  background: #333 !important;
+  vertical-align: top !important;
+}
+
+.icinga-latest-problems h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.icinga-latest-problems td {
+  font-size: 0.7em;
+  white-space: nowrap;
+}
+
+.icinga-latest-problems td.icinga-hostname,
+.icinga-latest-problems td.icinga-servicename {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
