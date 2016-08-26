@@ -63,6 +63,7 @@ Now go to http://localhost:3030/
 License
 -------
 
+- (c) 2016 ITAF bvba <info@itaf.eu>
 - (c) 2016 Momcilo Medic <medicmomcilo@gmail.com>
 - (c) 2014 NETWAYS GmbH <info@netways.de>
 - (c) 2014 Markus Frosch <markus@lazyfrosch.de>
